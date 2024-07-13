@@ -1,0 +1,106 @@
+body {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Styles pour la marquise */
+#marqueeSection {
+    background-color: #222;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee {
+    color: #fff;
+    font-size: 20px;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Styles pour l'écran de jeu */
+#gameScreenSection {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Largeur maximale du game screen */
+}
+
+canvas {
+    display: block;
+    background-color: #000;
+    border: 2px solid #fff;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Styles pour le panneau de contrôles */
+#controlsPanelSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px; /* Espacement entre les boutons */
+    background-color: #333; /* Couleur de fond pour les boutons */
+}
+
+.button:active {
+    opacity: 0.7; /* Opacité réduite lors du clic */
+}
+
+.button.red {
+    background-color: #FF5733;
+}
+
+.button.blue {
+    background-color: #3498DB;
+}
+
+.button.yellow {
+    background-color: #F1C40F;
+}
+
+.button.green {
+    background-color: #27AE60;
+}
+
+/* Styles pour le bouton de démarrage */
+#startButtonSection {
+    margin-top: 20px;
+}
+
+.start-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-button:active {
+    opacity: 0.7; /* Opacité réduite lors du clic */
+}
